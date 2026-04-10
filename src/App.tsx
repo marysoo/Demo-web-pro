@@ -16,7 +16,7 @@ export default function App() {
               Fast, mobile-friendly websites that bring daily WhatsApp inquiries to your business.
             </p>
             <a 
-              href="#" 
+              href="https://wa.me/2347039352602" 
               className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold px-8 py-4 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg shadow-green-500/30"
             >
               <MessageCircle size={24} />
@@ -112,15 +112,15 @@ export default function App() {
                 </div>
                 
                 <div className="space-y-4">
-                  <a href="mailto:info@naijawebgrowth.com" className="flex items-center gap-4 p-4 bg-slate-900 rounded-xl hover:bg-slate-700 transition-colors">
+                  <a href="mailto:info@naijabusinesssites.com" className="flex items-center gap-4 p-4 bg-slate-900 rounded-xl hover:bg-slate-700 transition-colors">
                     <Mail className="text-slate-400" />
-                    <span>info@naijawebgrowth.com</span>
+                    <span>info@naijabusinesssites.com</span>
                   </a>
-                  <a href="tel:08000000000" className="flex items-center gap-4 p-4 bg-slate-900 rounded-xl hover:bg-slate-700 transition-colors">
+                  <a href="tel:+2347039352602" className="flex items-center gap-4 p-4 bg-slate-900 rounded-xl hover:bg-slate-700 transition-colors">
                     <Phone className="text-slate-400" />
-                    <span>0800 000 0000</span>
+                    <span>+234 703 935 2602</span>
                   </a>
-                  <a href="#" className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-4 rounded-xl mt-4 transition-colors">
+                  <a href="https://wa.me/2347039352602" className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-4 rounded-xl mt-4 transition-colors">
                     <MessageCircle />
                     Message Us on WhatsApp
                   </a>
@@ -136,9 +136,9 @@ export default function App() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Globe className="text-green-500" size={24} />
-            <span className="text-xl font-bold text-white tracking-tight">Naija Web Growth</span>
+            <span className="text-xl font-bold text-white tracking-tight">Naija Business Sites</span>
           </div>
-          <p>© {new Date().getFullYear()} Naija Web Growth. All Rights Reserved.</p>
+          <p>© {new Date().getFullYear()} Naija Business Sites. All Rights Reserved.</p>
         </div>
       </footer>
     </div>
