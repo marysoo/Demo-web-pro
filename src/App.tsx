@@ -370,23 +370,23 @@ export default function App() {
                   </div>
                   <h3 className="text-3xl font-bold text-slate-900">WooCommerce E-Commerce Stores</h3>
                   <p className="text-slate-600 leading-relaxed">
-                    Ideal for Nigerian merchants, fashion boutiques, gadget vendors, and wholesalers who want full ownership of their online store without monthly subscription fees.
+                    Ideal for global merchants, fashion boutiques, gadget vendors, and wholesalers who want full ownership of their online store without monthly subscription fees.
                   </p>
 
                   <div className="space-y-3 pt-2">
                     <div className="flex items-start gap-3">
                       <div className="mt-1 p-1 bg-green-100 text-green-700 rounded-full"><CheckCircle size={16} /></div>
                       <div>
-                        <strong className="text-slate-900 text-sm">Paystack & Flutterwave Integration:</strong>
-                        <p className="text-xs text-slate-500">Accept Naira debit cards, USSD codes, bank transfers, and instant email receipts.</p>
+                        <strong className="text-slate-900 text-sm">Global Payment Gateway Integrations:</strong>
+                        <p className="text-xs text-slate-500">Accept Stripe, PayPal, Paystack, credit/debit cards, USSD, and instant digital receipts.</p>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3">
                       <div className="mt-1 p-1 bg-green-100 text-green-700 rounded-full"><CheckCircle size={16} /></div>
                       <div>
-                        <strong className="text-slate-900 text-sm">Local Delivery & Shipping Rates:</strong>
-                        <p className="text-xs text-slate-500">Set state-by-state delivery fees (Lagos, Abuja, PH, Interstate, Park pickup).</p>
+                        <strong className="text-slate-900 text-sm">Worldwide & Regional Shipping Rates:</strong>
+                        <p className="text-xs text-slate-500">Set country-by-country, zone, or regional delivery fees with automatic shipping calculator.</p>
                       </div>
                     </div>
 
@@ -394,7 +394,7 @@ export default function App() {
                       <div className="mt-1 p-1 bg-green-100 text-green-700 rounded-full"><CheckCircle size={16} /></div>
                       <div>
                         <strong className="text-slate-900 text-sm">Automated WhatsApp Order Alert:</strong>
-                        <p className="text-xs text-slate-500">Direct buyers to complete order payment or confirm details on your WhatsApp.</p>
+                        <p className="text-xs text-slate-500">Direct buyers to complete order payment or confirm details on your WhatsApp line.</p>
                       </div>
                     </div>
                   </div>
@@ -408,15 +408,15 @@ export default function App() {
                   </div>
                   <h3 className="text-3xl font-bold text-slate-900">Shopify E-Commerce Setup</h3>
                   <p className="text-slate-600 leading-relaxed">
-                    Designed for fast-scaling brands selling both locally in Nigeria and internationally. Blazing-fast page load speeds, slick checkout, and seamless inventory management.
+                    Designed for fast-scaling brands selling to clients worldwide. Blazing-fast page load speeds, slick checkout, and seamless inventory management.
                   </p>
 
                   <div className="space-y-3 pt-2">
                     <div className="flex items-start gap-3">
                       <div className="mt-1 p-1 bg-emerald-100 text-emerald-700 rounded-full"><CheckCircle size={16} /></div>
                       <div>
-                        <strong className="text-slate-900 text-sm">Global & Local Currency Converter:</strong>
-                        <p className="text-xs text-slate-500">Display products in Naira (₦), Dollars ($), Pounds (£), or Euros (€) dynamically.</p>
+                        <strong className="text-slate-900 text-sm">Multi-Currency & Auto Converter:</strong>
+                        <p className="text-xs text-slate-500">Display products in Dollars ($), Euros (€), Pounds (£), Naira (₦), or local currencies dynamically.</p>
                       </div>
                     </div>
 
@@ -446,7 +446,7 @@ export default function App() {
                   </div>
                   <h3 className="text-3xl font-bold text-slate-900">Real Estate Agency & Developer Sites</h3>
                   <p className="text-slate-600 leading-relaxed">
-                    Purpose-built property listing portals for estate agents, realtors, and property developers in Lagos (Lekki, Ikoyi, Victoria Island), Abuja, and Port Harcourt.
+                    Purpose-built property listing portals for estate agents, realtors, and property developers serving international buyers and luxury markets worldwide.
                   </p>
 
                   <div className="space-y-3 pt-2">
@@ -454,7 +454,7 @@ export default function App() {
                       <div className="mt-1 p-1 bg-blue-100 text-blue-700 rounded-full"><CheckCircle size={16} /></div>
                       <div>
                         <strong className="text-slate-900 text-sm">Interactive Property Filters:</strong>
-                        <p className="text-xs text-slate-500">Filter by location, price range (₦), property type (Duplex, Land, Apartment), bedrooms & amenities.</p>
+                        <p className="text-xs text-slate-500">Filter by location, price range ($ / € / £ / ₦), property type (Duplex, Villa, Land, Apartment), bedrooms & amenities.</p>
                       </div>
                     </div>
 
@@ -499,8 +499,8 @@ export default function App() {
                     <div className="flex items-start gap-3">
                       <div className="mt-1 p-1 bg-sky-100 text-sky-700 rounded-full"><CheckCircle size={16} /></div>
                       <div>
-                        <strong className="text-slate-900 text-sm">Rank High on Google Nigeria (SEO):</strong>
-                        <p className="text-xs text-slate-500">Built-in Yoast/RankMath SEO configuration to rank your business for local Nigerian search terms.</p>
+                        <strong className="text-slate-900 text-sm">Rank High on Google Globally (SEO):</strong>
+                        <p className="text-xs text-slate-500">Built-in Yoast/RankMath SEO configuration to rank your business for global and regional search terms.</p>
                       </div>
                     </div>
 
@@ -522,7 +522,7 @@ export default function App() {
                   </div>
                   <h3 className="text-3xl font-bold text-slate-900">Corporate Business Portfolios</h3>
                   <p className="text-slate-600 leading-relaxed">
-                    Establish authority and build instant trust for logistics companies, law firms, engineering practices, financial consultants, medical clinics, and B2B providers in Nigeria.
+                    Establish authority and build instant trust for logistics companies, law firms, engineering practices, financial consultants, medical clinics, and B2B providers worldwide.
                   </p>
 
                   <div className="space-y-3 pt-2">
@@ -546,7 +546,7 @@ export default function App() {
                       <div className="mt-1 p-1 bg-slate-200 text-slate-800 rounded-full"><CheckCircle size={16} /></div>
                       <div>
                         <strong className="text-slate-900 text-sm">Corporate Domain & Official Email Setup:</strong>
-                        <p className="text-xs text-slate-500">Full setup of customized emails (e.g. contact@yourcompany.com.ng).</p>
+                        <p className="text-xs text-slate-500">Full setup of customized emails (e.g. contact@yourcompany.com).</p>
                       </div>
                     </div>
                   </div>
@@ -560,7 +560,7 @@ export default function App() {
                   </div>
                   <h3 className="text-3xl font-bold text-slate-900">School Websites & Student Portals</h3>
                   <p className="text-slate-600 leading-relaxed">
-                    Complete digital web systems for nursery, primary, secondary schools, academies, and training institutes across Nigeria.
+                    Complete digital web systems for nursery, primary, secondary schools, academies, and training institutes globally.
                   </p>
 
                   <div className="space-y-3 pt-2">
@@ -583,8 +583,8 @@ export default function App() {
                     <div className="flex items-start gap-3">
                       <div className="mt-1 p-1 bg-amber-100 text-amber-800 rounded-full"><CheckCircle size={16} /></div>
                       <div>
-                        <strong className="text-slate-900 text-sm">School Fees Online Payment:</strong>
-                        <p className="text-xs text-slate-500">Integrated Paystack portal for online tuition fee payments with instant digital receipts.</p>
+                        <strong className="text-slate-900 text-sm">Tuition & Fees Online Payment:</strong>
+                        <p className="text-xs text-slate-500">Integrated online payment portal for tuition fee payments with instant digital receipts.</p>
                       </div>
                     </div>
                   </div>
@@ -634,9 +634,9 @@ export default function App() {
                     <div className="flex items-center justify-between bg-slate-900 p-3 rounded-lg">
                       <div className="flex items-center gap-2">
                         <ShoppingCart className="text-purple-400" size={18} />
-                        <span className="font-bold text-sm">Naija Fashion Hub</span>
+                        <span className="font-bold text-sm">Global Fashion Hub</span>
                       </div>
-                      <span className="text-xs text-slate-400 bg-slate-800 px-2 py-0.5 rounded">Cart: 1 item (₦25,000)</span>
+                      <span className="text-xs text-slate-400 bg-slate-800 px-2 py-0.5 rounded">Cart: 1 item ($65.00)</span>
                     </div>
 
                     <div className="bg-slate-900 p-4 rounded-xl border border-slate-800 flex gap-4 items-center">
@@ -645,26 +645,26 @@ export default function App() {
                       </div>
                       <div className="space-y-1">
                         <span className="text-[10px] bg-purple-950 text-purple-300 border border-purple-800 px-2 py-0.5 rounded uppercase font-bold">Best Seller</span>
-                        <h4 className="font-bold text-sm text-white">Luxury Ankara Prints - 6 Yards</h4>
-                        <div className="text-emerald-400 font-extrabold text-base">₦25,000 <span className="line-through text-slate-500 text-xs font-normal">₦32,000</span></div>
-                        <p className="text-[10px] text-slate-400">In Stock • Delivery in 24 Hours</p>
+                        <h4 className="font-bold text-sm text-white">Luxury Designer Wear - Global Collection</h4>
+                        <div className="text-emerald-400 font-extrabold text-base">$65.00 <span className="line-through text-slate-500 text-xs font-normal">$85.00</span></div>
+                        <p className="text-[10px] text-slate-400">In Stock • Express Worldwide Shipping</p>
                       </div>
                     </div>
 
                     <div className="bg-slate-900/90 p-3 rounded-lg border border-slate-800 text-xs space-y-2">
                       <div className="flex justify-between text-slate-300">
                         <span>Payment Gateway:</span>
-                        <span className="text-emerald-400 font-bold flex items-center gap-1"><CreditCard size={12} /> Paystack (Naira / Card / USSD)</span>
+                        <span className="text-emerald-400 font-bold flex items-center gap-1"><CreditCard size={12} /> Stripe / PayPal / Paystack (USD / EUR / GBP)</span>
                       </div>
                       <a 
                         href="https://wa.me/2347039352602?text=Hello,%20I%20want%20to%20build%20a%20WooCommerce%20store"
-                        onClick={(e) => handleOrderClick(e, 'Sample Store Order Initialized', 'Simulating Paystack payment gateway checkout connection for WooCommerce...', 'https://wa.me/2347039352602?text=Hello,%20I%20want%20to%20build%20a%20WooCommerce%20store')}
+                        onClick={(e) => handleOrderClick(e, 'Sample Store Order Initialized', 'Simulating global payment gateway checkout connection for WooCommerce...', 'https://wa.me/2347039352602?text=Hello,%20I%20want%20to%20build%20a%20WooCommerce%20store')}
                         target="_blank"
                         rel="noreferrer"
                         className="w-full bg-purple-600 hover:bg-purple-500 text-white font-bold py-2.5 rounded-lg flex items-center justify-center gap-2 transition-colors text-xs"
                       >
                         <ShoppingCart size={14} />
-                        <span>Pay ₦25,000 via Paystack / Card</span>
+                        <span>Pay $65.00 via Stripe / Card / PayPal</span>
                       </a>
                     </div>
                   </div>
@@ -679,8 +679,8 @@ export default function App() {
                         <span className="font-bold text-sm">Glow Aesthetics Store</span>
                       </div>
                       <div className="flex gap-1">
-                        <span className="bg-emerald-950 text-emerald-400 border border-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">NGN (₦)</span>
-                        <span className="bg-slate-800 text-slate-400 text-[10px] px-2 py-0.5 rounded">USD ($)</span>
+                        <span className="bg-emerald-950 text-emerald-400 border border-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">USD ($)</span>
+                        <span className="bg-slate-800 text-slate-400 text-[10px] px-2 py-0.5 rounded">EUR (€)</span>
                       </div>
                     </div>
 
@@ -688,14 +688,14 @@ export default function App() {
                       <div className="bg-slate-950 p-3 rounded-lg border border-slate-800 text-center space-y-1">
                         <div className="w-12 h-12 bg-emerald-900/40 rounded-full flex items-center justify-center mx-auto text-xl">✨</div>
                         <div className="font-bold text-xs text-white">Vitamin C Serum</div>
-                        <div className="text-emerald-400 font-bold text-xs">₦14,500</div>
+                        <div className="text-emerald-400 font-bold text-xs">$29.00</div>
                         <button className="w-full bg-slate-800 text-slate-200 text-[10px] py-1 rounded hover:bg-emerald-600 hover:text-white transition-colors">Add to Cart</button>
                       </div>
 
                       <div className="bg-slate-950 p-3 rounded-lg border border-slate-800 text-center space-y-1">
                         <div className="w-12 h-12 bg-pink-900/40 rounded-full flex items-center justify-center mx-auto text-xl">🧴</div>
                         <div className="font-bold text-xs text-white">Hydrating Sunscreen</div>
-                        <div className="text-emerald-400 font-bold text-xs">₦18,000</div>
+                        <div className="text-emerald-400 font-bold text-xs">$35.00</div>
                         <button className="w-full bg-slate-800 text-slate-200 text-[10px] py-1 rounded hover:bg-emerald-600 hover:text-white transition-colors">Add to Cart</button>
                       </div>
                     </div>
@@ -711,23 +711,23 @@ export default function App() {
                 {webCategory === 'realestate' && (
                   <div className="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-4">
                     <div className="bg-slate-900 p-3 rounded-lg border border-slate-800 flex items-center justify-between">
-                      <span className="font-bold text-sm text-white flex items-center gap-1.5"><Home className="text-blue-400" size={16} /> Lekki Prime Realty</span>
-                      <span className="bg-blue-950 text-blue-300 border border-blue-800 text-[10px] px-2 py-0.5 rounded font-bold">Lagos • Abuja</span>
+                      <span className="font-bold text-sm text-white flex items-center gap-1.5"><Home className="text-blue-400" size={16} /> Apex Prime International Realty</span>
+                      <span className="bg-blue-950 text-blue-300 border border-blue-800 text-[10px] px-2 py-0.5 rounded font-bold">Global Listings</span>
                     </div>
 
                     <div className="bg-slate-900 rounded-xl overflow-hidden border border-slate-800">
                       <div className="bg-gradient-to-r from-blue-900 via-slate-900 to-indigo-900 p-6 text-center relative">
                         <span className="absolute top-3 left-3 bg-green-500 text-white font-extrabold text-[9px] px-2 py-0.5 rounded uppercase">For Sale</span>
-                        <div className="text-2xl font-black text-white mb-1">₦175,000,000</div>
-                        <div className="font-bold text-xs text-blue-200">Luxury 4-Bedroom Terrace Duplex</div>
-                        <div className="text-[10px] text-slate-400">📍 Lekki Phase 1, Lagos State</div>
+                        <div className="text-2xl font-black text-white mb-1">$450,000</div>
+                        <div className="font-bold text-xs text-blue-200">Luxury 4-Bedroom Coastal Villa</div>
+                        <div className="text-[10px] text-slate-400">📍 Prime International Waterfront Location</div>
                       </div>
 
                       <div className="p-3 bg-slate-950 flex justify-around text-[10px] text-slate-300 border-t border-slate-800">
                         <span>🛏️ 4 Bedrooms</span>
                         <span>🛁 5 Baths</span>
                         <span>🏊 Swimming Pool</span>
-                        <span>⚡ 24/7 Solar</span>
+                        <span>⚡ Smart Energy</span>
                       </div>
                     </div>
 
@@ -761,12 +761,12 @@ export default function App() {
                       <div className="space-y-1">
                         <span className="text-slate-400 text-[10px]">Recent News & Articles Published:</span>
                         <div className="bg-slate-950 p-2 rounded border border-slate-800 text-slate-200 text-[11px] font-medium">
-                          📰 "How Nigerian Businesses Can Double Sales Using Online Websites"
+                          📰 "How Global Businesses Double Sales Using Modern Web Applications"
                         </div>
                       </div>
 
                       <div className="flex justify-between items-center text-[10px] text-slate-400 pt-1">
-                        <span>Google Nigeria Ranking: <strong className="text-sky-400">Page 1 Optimized</strong></span>
+                        <span>Google Search Ranking: <strong className="text-sky-400">Global Page 1 Optimized</strong></span>
                         <span>Admin Access: <strong className="text-white">Included</strong></span>
                       </div>
                     </div>
@@ -786,7 +786,7 @@ export default function App() {
                       <p className="text-slate-400 text-xs max-w-xs mx-auto">Custom domain email, official company profile, staff portal & online inquiry routing.</p>
                       
                       <div className="pt-2 flex justify-center gap-2">
-                        <span className="bg-slate-800 px-2.5 py-1 rounded text-[10px] text-slate-300 font-mono">info@yourcompany.com.ng</span>
+                        <span className="bg-slate-800 px-2.5 py-1 rounded text-[10px] text-slate-300 font-mono">info@yourcompany.com</span>
                       </div>
                     </div>
                   </div>
@@ -1153,7 +1153,7 @@ export default function App() {
                     <div className="p-4 space-y-2">
                       <div className="font-bold text-white text-sm">YouTube In-Stream & Discovery Video Campaign</div>
                       <p className="text-slate-400 text-xs leading-relaxed">
-                        We write engaging video ad scripts, create striking video visuals, and run target campaigns directly to Nigerian YouTube viewers interested in your services.
+                        We write engaging video ad scripts, create striking video visuals, and run target campaigns directly to global YouTube viewers interested in your services.
                       </p>
                     </div>
                   </div>
@@ -1173,10 +1173,10 @@ export default function App() {
                       {/* Center Hook Text */}
                       <div className="my-auto text-center space-y-2">
                         <div className="inline-block bg-pink-600 text-white font-black text-xs px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">
-                          🔥 Trending in Nigeria
+                          🔥 Trending Worldwide
                         </div>
                         <h4 className="text-2xl font-black text-white leading-tight drop-shadow-md">
-                          HOW TO GET MORE CLIENTS IN NIGERIA 🇳🇬
+                          HOW TO GET MORE CLIENTS WORLDWIDE 🌍
                         </h4>
                         <p className="text-slate-300 text-xs bg-slate-900/80 p-2 rounded-xl border border-slate-800 max-w-xs mx-auto">
                           "If you sell products or services, stop depending only on word-of-mouth..."
@@ -1198,7 +1198,7 @@ export default function App() {
                       {/* Bottom TikTok CTA Button */}
                       <div className="bg-pink-600 hover:bg-pink-500 p-3 rounded-2xl flex items-center justify-between transition-colors shadow-lg shadow-pink-600/30">
                         <div>
-                          <div className="font-bold text-white text-xs">Naija Business Sites</div>
+                          <div className="font-bold text-white text-xs">Global Business Sites</div>
                           <div className="text-[10px] text-pink-100">Order Website, Bot or TikTok Ads</div>
                         </div>
                         <a 
@@ -1215,7 +1215,7 @@ export default function App() {
                     <div className="p-4 space-y-1">
                       <div className="font-bold text-white text-sm">TikTok Viral Video Ad Strategy</div>
                       <p className="text-slate-400 text-xs">
-                        High energy, trendy short video ads that hook young Nigerian scrollers and convert them into instant WhatsApp buyers.
+                        High energy, trendy short video ads that hook global scrollers and convert them into instant WhatsApp buyers.
                       </p>
                     </div>
                   </div>
@@ -1368,7 +1368,7 @@ export default function App() {
                   {activeTab === 'lead' && (
                     <div className="grid grid-cols-2 gap-2">
                       <button 
-                        onClick={() => handleSimulateCommand('🌐 Get Website Pricing', 'Our standard Business Website package starts at ₦120,000 including domain, hosting, and mobile optimization! Ready to start?')}
+                        onClick={() => handleSimulateCommand('🌐 Get Website Pricing', 'Our standard Business Website package starts at $199 including domain, hosting, and mobile optimization! Ready to start?')}
                         className="p-2.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl text-xs font-medium text-left text-sky-300 transition-colors"
                       >
                         <span>🌐 Get Website Pricing</span>
@@ -1380,7 +1380,7 @@ export default function App() {
                         <span>📢 Social Media Ads</span>
                       </button>
                       <button 
-                        onClick={() => handleSimulateCommand('🤖 Order Telegram Bot', 'Custom Telegram bots start at ₦80,000. Delivered in 2-3 days with full setup! Call or WhatsApp us to get started.')}
+                        onClick={() => handleSimulateCommand('🤖 Order Telegram Bot', 'Custom Telegram bots start at $149. Delivered in 2-3 days with full setup! Call or WhatsApp us to get started.')}
                         className="p-2.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl text-xs font-medium text-left text-sky-300 transition-colors col-span-2"
                       >
                         <span>🤖 Order Telegram Bot</span>
@@ -1391,13 +1391,13 @@ export default function App() {
                   {activeTab === 'shop' && (
                     <div className="grid grid-cols-2 gap-2">
                       <button 
-                        onClick={() => handleSimulateCommand('📦 View Product List', '1. Premium Website (₦120k)\n2. Telegram Sales Bot (₦80k)\n3. Social Media Ads Campaign (₦60k)\n4. Full Growth Combo (₦220k - Save ₦40k!)')}
+                        onClick={() => handleSimulateCommand('📦 View Product List', '1. Premium Website ($199)\n2. Telegram Sales Bot ($149)\n3. Social Media Ads Campaign ($99)\n4. Full Growth Combo ($349 - Save $98!)')}
                         className="p-2.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl text-xs font-medium text-left text-sky-300 transition-colors"
                       >
                         📦 View Product List
                       </button>
                       <button 
-                        onClick={() => handleSimulateCommand('🛒 Calculate Combo Discount', 'Full Growth Combo selected! Includes website + Telegram bot + social media ads setup. Special total: ₦220,000.')}
+                        onClick={() => handleSimulateCommand('🛒 Calculate Combo Discount', 'Full Growth Combo selected! Includes website + Telegram bot + social media ads setup. Special total: $349.')}
                         className="p-2.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl text-xs font-medium text-left text-sky-300 transition-colors"
                       >
                         🛒 Calculate Discount
@@ -1653,7 +1653,7 @@ export default function App() {
               <div className="space-y-6">
                 {[
                   { icon: <Zap className="text-yellow-400" />, title: "Fast Delivery", desc: "Get your website or Telegram bot live in just 2–3 days." },
-                  { icon: <Megaphone className="text-purple-400" />, title: "High-Converting Paid Ads", desc: "Targeted Facebook, YouTube, and TikTok ads that drive real Naira sales." },
+                  { icon: <Megaphone className="text-purple-400" />, title: "High-Converting Paid Ads", desc: "Targeted Facebook, YouTube, and TikTok ads that drive real sales revenue." },
                   { icon: <Bot className="text-sky-400" />, title: "24/7 Bot Automation", desc: "Keep receiving leads and answering clients even when offline." },
                   { icon: <Smartphone className="text-blue-400" />, title: "Mobile & Chat Optimized", desc: "Looks perfect on smartphones and popular messaging apps." },
                   { icon: <CheckCircle className="text-emerald-400" />, title: "Affordable & Professional", desc: "Premium quality without the premium price tag." }
@@ -1685,9 +1685,9 @@ export default function App() {
                 </div>
                 
                 <div className="space-y-4">
-                  <a href="mailto:info@naijabusinesssites.com" className="flex items-center gap-4 p-4 bg-slate-900 rounded-xl hover:bg-slate-700 transition-colors">
+                  <a href="mailto:info@globalbusinesssites.com" className="flex items-center gap-4 p-4 bg-slate-900 rounded-xl hover:bg-slate-700 transition-colors">
                     <Mail className="text-slate-400" />
-                    <span>info@naijabusinesssites.com</span>
+                    <span>info@globalbusinesssites.com</span>
                   </a>
                   <a href="tel:+2347039352602" className="flex items-center gap-4 p-4 bg-slate-900 rounded-xl hover:bg-slate-700 transition-colors">
                     <Phone className="text-slate-400" />
@@ -1763,10 +1763,10 @@ export default function App() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Globe className="text-green-500" size={24} />
-            <span className="text-xl font-bold text-white tracking-tight">Naija Business Sites</span>
+            <span className="text-xl font-bold text-white tracking-tight">Global Business Sites</span>
           </div>
           <p className="text-xs text-slate-500 mb-2">Websites • Telegram Bots • Facebook, YouTube & TikTok Ads Creation</p>
-          <p>© {new Date().getFullYear()} Naija Business Sites. All Rights Reserved.</p>
+          <p>© {new Date().getFullYear()} Global Business Sites. All Rights Reserved.</p>
         </div>
       </footer>
     </div>
