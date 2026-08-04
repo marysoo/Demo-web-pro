@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { 
   MessageCircle, Globe, Smartphone, Wrench, Zap, CheckCircle, TrendingUp, Mail, Phone, Bot, Send, Sparkles, User, RefreshCw, 
   Megaphone, Video, Share2, Target, BarChart3, Play, Tv, Flame, Heart, MessageSquare, ExternalLink,
-  ShoppingCart, Home, Building2, Layers, GraduationCap, ShoppingBag, ArrowRight, CheckCircle2, ShieldCheck, CreditCard, Filter, X,
+  ShoppingCart, Home, Building2, Layers, GraduationCap, ShoppingBag, ArrowRight, CheckCircle2, ShieldCheck, CreditCard, Filter, X, Menu,
   ChevronLeft, ChevronRight, Star, Quote, Award
 } from 'lucide-react';
 
 export default function App() {
+  // Mobile Navbar Drawer state
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   // Interactive Telegram Bot Simulator state
   const [activeTab, setActiveTab] = useState<'lead' | 'shop' | 'support'>('lead');
   const [chatMessages, setChatMessages] = useState<Array<{ sender: 'user' | 'bot'; text: string; time: string }>>([
@@ -154,59 +158,368 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
+    <div className="min-h-screen bg-slate-50 font-sans text-slate-900 scroll-smooth">
+      {/* Top Sticky Navigation Bar */}
+      <nav className="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800/80 transition-all shadow-lg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-4">
+          {/* Brand Logo */}
+          <a href="#" className="flex items-center gap-3 group">
+            <div className="w-10 h-10 bg-gradient-to-tr from-emerald-500 to-teal-400 rounded-xl flex items-center justify-center text-slate-950 font-black text-xl shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+              <Globe size={22} className="text-slate-950" />
+            </div>
+            <div>
+              <span className="font-extrabold text-white text-lg tracking-tight block leading-tight">
+                Global Business <span className="text-emerald-400">Sites</span>
+              </span>
+              <span className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold block">Worldwide Growth</span>
+            </div>
+          </a>
+
+          {/* Desktop Nav Links */}
+          <div className="hidden lg:flex items-center gap-7 text-xs sm:text-sm font-medium text-slate-300">
+            <a href="#services" className="hover:text-emerald-400 transition-colors">Services</a>
+            <a href="#website-categories" className="hover:text-emerald-400 transition-colors">Websites</a>
+            <a href="#social-ads" className="hover:text-emerald-400 transition-colors">Social Ads</a>
+            <a href="#telegram-bots" className="hover:text-emerald-400 transition-colors">Telegram Bots</a>
+            <a href="#client-stories" className="hover:text-emerald-400 transition-colors">Testimonials</a>
+            <a href="#why-us" className="hover:text-emerald-400 transition-colors">Why Us</a>
+          </div>
+
+          {/* Right Action & Mobile Button */}
+          <div className="flex items-center gap-3">
+            <a 
+              href="https://wa.me/2347039352602" 
+              onClick={(e) => handleOrderClick(e, 'WhatsApp Consultation Initialized', 'Connecting you directly with a Global Business Sites advisor...', 'https://wa.me/2347039352602')}
+              className="hidden sm:inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold px-4 py-2.5 rounded-xl text-xs transition-all shadow-md shadow-green-500/20 transform hover:scale-105"
+            >
+              <MessageCircle size={16} />
+              <span>Chat on WhatsApp</span>
+            </a>
+
+            {/* Mobile Hamburger Menu Toggle */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="lg:hidden p-2.5 text-slate-300 hover:text-white bg-slate-900 border border-slate-800 rounded-xl focus:outline-none"
+              aria-label="Toggle navigation menu"
+            >
+              {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation Drawer */}
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="lg:hidden bg-slate-950 border-b border-slate-800 px-6 py-6 space-y-4"
+            >
+              <div className="flex flex-col space-y-3 font-semibold text-sm text-slate-300">
+                <a 
+                  href="#services" 
+                  onClick={() => setMobileMenuOpen(false)} 
+                  className="py-2 hover:text-emerald-400 border-b border-slate-900 flex items-center justify-between"
+                >
+                  <span>Our Services</span>
+                  <ArrowRight size={14} className="text-slate-500" />
+                </a>
+                <a 
+                  href="#website-categories" 
+                  onClick={() => setMobileMenuOpen(false)} 
+                  className="py-2 hover:text-emerald-400 border-b border-slate-900 flex items-center justify-between"
+                >
+                  <span>Website Categories</span>
+                  <ArrowRight size={14} className="text-slate-500" />
+                </a>
+                <a 
+                  href="#social-ads" 
+                  onClick={() => setMobileMenuOpen(false)} 
+                  className="py-2 hover:text-emerald-400 border-b border-slate-900 flex items-center justify-between"
+                >
+                  <span>Social Media Ads</span>
+                  <ArrowRight size={14} className="text-slate-500" />
+                </a>
+                <a 
+                  href="#telegram-bots" 
+                  onClick={() => setMobileMenuOpen(false)} 
+                  className="py-2 hover:text-emerald-400 border-b border-slate-900 flex items-center justify-between"
+                >
+                  <span>Custom Telegram Bots</span>
+                  <ArrowRight size={14} className="text-slate-500" />
+                </a>
+                <a 
+                  href="#client-stories" 
+                  onClick={() => setMobileMenuOpen(false)} 
+                  className="py-2 hover:text-emerald-400 border-b border-slate-900 flex items-center justify-between"
+                >
+                  <span>Client Success Stories</span>
+                  <ArrowRight size={14} className="text-slate-500" />
+                </a>
+                <a 
+                  href="#why-us" 
+                  onClick={() => setMobileMenuOpen(false)} 
+                  className="py-2 hover:text-emerald-400 border-b border-slate-900 flex items-center justify-between"
+                >
+                  <span>Why Choose Us</span>
+                  <ArrowRight size={14} className="text-slate-500" />
+                </a>
+              </div>
+
+              <div className="pt-2">
+                <a 
+                  href="https://wa.me/2347039352602" 
+                  onClick={(e) => {
+                    setMobileMenuOpen(false);
+                    handleOrderClick(e, 'WhatsApp Consultation Initialized', 'Connecting you directly with a Global Business Sites advisor...', 'https://wa.me/2347039352602');
+                  }}
+                  className="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-3.5 rounded-xl text-sm transition-all shadow-lg"
+                >
+                  <MessageCircle size={18} />
+                  <span>Chat on WhatsApp</span>
+                </a>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </nav>
+
       {/* Hero Section */}
-      <header className="bg-slate-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-green-400 via-transparent to-transparent"></div>
-        <div className="max-w-6xl mx-auto px-6 py-24 md:py-32 relative z-10">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-slate-800 border border-slate-700 text-sky-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Sparkles size={18} />
-              <span>Websites • Telegram Bots • Social Media Ads</span>
+      <header className="bg-slate-950 text-white relative overflow-hidden border-b border-slate-800">
+        {/* Ambient Glowing Background Orbs */}
+        <div className="absolute top-1/4 left-10 w-96 h-96 bg-emerald-500/15 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-indigo-500/15 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 lg:py-28 relative z-10">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            {/* Left Content Column */}
+            <div className="lg:col-span-7 space-y-8 text-left">
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="inline-flex items-center gap-2 bg-slate-900/90 border border-emerald-500/30 text-emerald-400 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold shadow-lg shadow-emerald-500/10 backdrop-blur-md"
+              >
+                <span className="flex h-2 w-2 relative">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <Sparkles size={16} className="text-amber-400" />
+                <span>Global Digital Scale Engine • Websites, Bots & Paid Ads</span>
+              </motion.div>
+
+              <motion.h1 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.15] text-white"
+              >
+                We Help Businesses Worldwide Scale & Get More{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-indigo-400">
+                  Customers Online
+                </span>
+              </motion.h1>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-lg sm:text-xl text-slate-300 max-w-2xl leading-relaxed"
+              >
+                Fast, mobile-friendly websites, custom Telegram bots, and high-converting{' '}
+                <strong className="text-white font-semibold underline decoration-emerald-500/50 decoration-2 underline-offset-4">
+                  Facebook, YouTube & TikTok Ads
+                </strong>{' '}
+                that drive global reach, inquiries, and revenue.
+              </motion.p>
+
+              {/* Responsive CTAs */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-2"
+              >
+                <a 
+                  href="https://wa.me/2347039352602" 
+                  onClick={(e) => handleOrderClick(e, 'Consultation Request Processing', 'Connecting you directly with a Global Business Sites representative on WhatsApp...', 'https://wa.me/2347039352602')}
+                  className="inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold px-7 py-4 rounded-2xl text-base transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-xl shadow-green-500/25 group"
+                >
+                  <MessageCircle size={22} className="group-hover:rotate-12 transition-transform" />
+                  <span>Chat on WhatsApp Now</span>
+                  <ArrowRight size={18} className="opacity-70 group-hover:translate-x-1 transition-transform" />
+                </a>
+
+                <div className="flex flex-wrap gap-2">
+                  <a 
+                    href="#website-categories" 
+                    className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-emerald-400 border border-slate-700/80 font-semibold px-4 py-3.5 rounded-xl text-xs sm:text-sm transition-all hover:border-emerald-500/50"
+                  >
+                    <Globe size={16} />
+                    <span>Websites</span>
+                  </a>
+                  <a 
+                    href="#social-ads" 
+                    className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-purple-400 border border-slate-700/80 font-semibold px-4 py-3.5 rounded-xl text-xs sm:text-sm transition-all hover:border-purple-500/50"
+                  >
+                    <Megaphone size={16} />
+                    <span>Social Ads</span>
+                  </a>
+                  <a 
+                    href="#telegram-bots" 
+                    className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-sky-400 border border-slate-700/80 font-semibold px-4 py-3.5 rounded-xl text-xs sm:text-sm transition-all hover:border-sky-500/50"
+                  >
+                    <Bot size={16} />
+                    <span>Telegram Bots</span>
+                  </a>
+                </div>
+              </motion.div>
+
+              {/* Micro Trust Indicators */}
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-slate-800/80"
+              >
+                <div className="flex items-center gap-2.5">
+                  <div className="p-2 bg-emerald-500/10 text-emerald-400 rounded-lg border border-emerald-500/20">
+                    <Zap size={16} />
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold text-white">2–3 Days</div>
+                    <div className="text-[10px] text-slate-400">Fast Delivery</div>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2.5">
+                  <div className="p-2 bg-indigo-500/10 text-indigo-400 rounded-lg border border-indigo-500/20">
+                    <Globe size={16} />
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold text-white">Global Reach</div>
+                    <div className="text-[10px] text-slate-400">50+ Countries</div>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2.5">
+                  <div className="p-2 bg-purple-500/10 text-purple-400 rounded-lg border border-purple-500/20">
+                    <TrendingUp size={16} />
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold text-white">4.2x ROAS</div>
+                    <div className="text-[10px] text-slate-400">Avg Return on Ads</div>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2.5">
+                  <div className="p-2 bg-sky-500/10 text-sky-400 rounded-lg border border-sky-500/20">
+                    <Bot size={16} />
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold text-white">24/7 Bots</div>
+                    <div className="text-[10px] text-slate-400">Automated Sales</div>
+                  </div>
+                </div>
+              </motion.div>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
-              We Help Businesses Worldwide Scale & Get More <span className="text-green-400">Customers Online</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-slate-300 mb-10 max-w-2xl leading-relaxed">
-              Fast, mobile-friendly websites, custom Telegram bots, and high-converting <strong className="text-white">Facebook, YouTube & TikTok Ads</strong> that drive global reach, inquiries, and revenue.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <a 
-                href="https://wa.me/2347039352602" 
-                onClick={(e) => handleOrderClick(e, 'Consultation Request Processing', 'Connecting you directly with a Global Business Sites representative on WhatsApp...', 'https://wa.me/2347039352602')}
-                className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold px-8 py-4 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg shadow-green-500/30"
-              >
-                <MessageCircle size={24} />
-                Chat on WhatsApp
-              </a>
-              <a 
-                href="#website-categories" 
-                className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-8 py-4 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg shadow-emerald-500/30"
-              >
-                <Globe size={24} />
-                Website Categories
-              </a>
-              <a 
-                href="#social-ads" 
-                className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-8 py-4 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg shadow-purple-500/30"
-              >
-                <Megaphone size={24} />
-                Social Media Ads
-              </a>
-              <a 
-                href="#telegram-bots" 
-                className="inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-500 text-white font-semibold px-8 py-4 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg shadow-sky-500/30"
-              >
-                <Bot size={24} />
-                Telegram Bots
-              </a>
-            </div>
+
+            {/* Right Visual Showcase Card */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="lg:col-span-5 relative"
+            >
+              <div className="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden backdrop-blur-xl">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-400 via-teal-400 to-indigo-500"></div>
+
+                {/* Dashboard Header Bar */}
+                <div className="flex items-center justify-between pb-6 border-b border-slate-800">
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                    <span className="text-xs text-slate-400 font-mono ml-2">global-growth-engine.v2</span>
+                  </div>
+                  <span className="inline-flex items-center gap-1.5 text-[10px] font-bold text-emerald-400 bg-emerald-950/80 border border-emerald-800 px-2.5 py-1 rounded-full">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> LIVE SYSTEM
+                  </span>
+                </div>
+
+                {/* Interactive Feature Stats Grid */}
+                <div className="py-6 space-y-4">
+                  {/* Metric Card 1 */}
+                  <div className="bg-slate-950 p-4 rounded-2xl border border-slate-800 flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="p-2.5 bg-emerald-500/20 text-emerald-400 rounded-xl border border-emerald-500/30">
+                        <BarChart3 size={20} />
+                      </div>
+                      <div>
+                        <div className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Global Ad Conversions</div>
+                        <div className="text-lg font-black text-white">$1,240,000+ Revenue</div>
+                      </div>
+                    </div>
+                    <span className="text-xs font-bold text-emerald-400 bg-emerald-950 border border-emerald-900 px-2 py-1 rounded-lg">
+                      +340% YoY
+                    </span>
+                  </div>
+
+                  {/* Metric Card 2 */}
+                  <div className="bg-slate-950 p-4 rounded-2xl border border-slate-800 flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="p-2.5 bg-sky-500/20 text-sky-400 rounded-xl border border-sky-500/30">
+                        <Bot size={20} />
+                      </div>
+                      <div>
+                        <div className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Telegram Bot Automation</div>
+                        <div className="text-sm font-bold text-white">24/7 Auto Instant Reply</div>
+                      </div>
+                    </div>
+                    <span className="text-xs font-bold text-sky-400 bg-sky-950 border border-sky-900 px-2 py-1 rounded-lg">
+                      Active
+                    </span>
+                  </div>
+
+                  {/* Metric Card 3 */}
+                  <div className="bg-slate-950 p-4 rounded-2xl border border-slate-800 flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="p-2.5 bg-purple-500/20 text-purple-400 rounded-xl border border-purple-500/30">
+                        <Smartphone size={20} />
+                      </div>
+                      <div>
+                        <div className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Mobile Page Speed</div>
+                        <div className="text-sm font-bold text-white">99 / 100 Google Score</div>
+                      </div>
+                    </div>
+                    <span className="text-xs font-bold text-purple-400 bg-purple-950 border border-purple-900 px-2 py-1 rounded-lg">
+                      Ultra-Fast
+                    </span>
+                  </div>
+                </div>
+
+                {/* Country Flag Badges */}
+                <div className="pt-4 border-t border-slate-800 flex items-center justify-between flex-wrap gap-2 text-xs text-slate-400">
+                  <span className="font-medium text-slate-300">Active Global Markets:</span>
+                  <div className="flex items-center gap-1.5 text-base">
+                    <span title="United States">🇺🇸</span>
+                    <span title="United Kingdom">🇬🇧</span>
+                    <span title="Canada">🇨🇦</span>
+                    <span title="United Arab Emirates">🇦🇪</span>
+                    <span title="Nigeria">🇳🇬</span>
+                    <span title="Germany">🇩🇪</span>
+                    <span title="Australia">🇦🇺</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </header>
 
       {/* Services Section */}
-      <section className="py-24 bg-white">
+      <section id="services" className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
@@ -1641,7 +1954,7 @@ export default function App() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-24 bg-slate-900 text-white">
+      <section id="why-us" className="py-24 bg-slate-900 text-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
