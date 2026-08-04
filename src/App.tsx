@@ -4,7 +4,7 @@ import {
   MessageCircle, Globe, Smartphone, Wrench, Zap, CheckCircle, TrendingUp, Mail, Phone, Bot, Send, Sparkles, User, RefreshCw, 
   Megaphone, Video, Share2, Target, BarChart3, Play, Tv, Flame, Heart, MessageSquare, ExternalLink,
   ShoppingCart, Home, Building2, Layers, GraduationCap, ShoppingBag, ArrowRight, CheckCircle2, ShieldCheck, CreditCard, Filter, X, Menu,
-  ChevronLeft, ChevronRight, Star, Quote, Award
+  ChevronLeft, ChevronRight, Star, Quote, Award, Blocks, Coins, Wallet, Cpu
 } from 'lucide-react';
 
 export default function App() {
@@ -21,7 +21,7 @@ export default function App() {
   const [adPlatform, setAdPlatform] = useState<'facebook' | 'youtube' | 'tiktok'>('facebook');
 
   // Website Categories Selector state
-  const [webCategory, setWebCategory] = useState<'woocommerce' | 'shopify' | 'realestate' | 'wordpress' | 'corporate' | 'education'>('woocommerce');
+  const [webCategory, setWebCategory] = useState<'woocommerce' | 'shopify' | 'realestate' | 'wordpress' | 'corporate' | 'education' | 'web3dapp'>('woocommerce');
 
   // Temporary Notification Toast state
   const [toast, setToast] = useState<{
@@ -114,6 +114,22 @@ export default function App() {
       metric: '85+ Corporate RFQs Monthly',
       quote: "The corporate portal built for our freight enterprise established immediate authority. Prospective corporate clients can request instant freight quotes, giving us a huge competitive edge in Dubai.",
       verified: true
+    },
+    {
+      id: 'alexander',
+      name: 'Alexander Lindqvist',
+      role: 'Co-Founder & CTO',
+      company: 'Aether Decentralized Protocol',
+      location: '🇸🇪 Stockholm, Sweden',
+      flag: '🇸🇪',
+      avatarBg: 'bg-gradient-to-tr from-teal-500 to-cyan-600',
+      initials: 'AL',
+      stars: 5,
+      service: 'Web3 dApp + Smart Contracts + Crypto Gateway',
+      industry: 'Blockchain & FinTech',
+      metric: '$3.8M Staked TVL • 0% Chargebacks',
+      quote: "They developed our custom React Web3 dApp with WalletConnect and Solidity smart contracts. Their team is 100% up to date with modern blockchain technology, non-custodial crypto checkout, and tokenomics!",
+      verified: true
     }
   ];
 
@@ -176,9 +192,10 @@ export default function App() {
           </a>
 
           {/* Desktop Nav Links */}
-          <div className="hidden lg:flex items-center gap-7 text-xs sm:text-sm font-medium text-slate-300">
+          <div className="hidden lg:flex items-center gap-6 text-xs sm:text-sm font-medium text-slate-300">
             <a href="#services" className="hover:text-emerald-400 transition-colors">Services</a>
-            <a href="#website-categories" className="hover:text-emerald-400 transition-colors">Websites</a>
+            <a href="#website-categories" className="hover:text-emerald-400 transition-colors">Websites & dApps</a>
+            <a href="#web3-blockchain" className="hover:text-emerald-400 transition-colors flex items-center gap-1 text-teal-300 font-bold"><Blocks size={14} /> Web3 & Crypto</a>
             <a href="#social-ads" className="hover:text-emerald-400 transition-colors">Social Ads</a>
             <a href="#telegram-bots" className="hover:text-emerald-400 transition-colors">Telegram Bots</a>
             <a href="#client-stories" className="hover:text-emerald-400 transition-colors">Testimonials</a>
@@ -306,7 +323,7 @@ export default function App() {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </span>
                 <Sparkles size={16} className="text-amber-400" />
-                <span>Global Digital Scale Engine • Websites, Bots & Paid Ads</span>
+                <span>Websites • Web3 & Blockchain dApps • Telegram Bots • Paid Ads</span>
               </motion.div>
 
               <motion.h1 
@@ -327,7 +344,7 @@ export default function App() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-lg sm:text-xl text-slate-300 max-w-2xl leading-relaxed"
               >
-                Fast, mobile-friendly websites, custom Telegram bots, and high-converting{' '}
+                Fast, mobile-friendly websites, custom Telegram bots, Web3 & crypto dApps, and high-converting{' '}
                 <strong className="text-white font-semibold underline decoration-emerald-500/50 decoration-2 underline-offset-4">
                   Facebook, YouTube & TikTok Ads
                 </strong>{' '}
@@ -358,6 +375,13 @@ export default function App() {
                   >
                     <Globe size={16} />
                     <span>Websites</span>
+                  </a>
+                  <a 
+                    href="#web3-blockchain" 
+                    className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-teal-300 border border-slate-700/80 font-semibold px-4 py-3.5 rounded-xl text-xs sm:text-sm transition-all hover:border-teal-500/50"
+                  >
+                    <Blocks size={16} />
+                    <span>Web3 dApps</span>
                   </a>
                   <a 
                     href="#social-ads" 
@@ -559,6 +583,16 @@ export default function App() {
             </div>
             
             <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition-shadow group">
+              <div className="w-14 h-14 bg-teal-100 text-teal-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <Blocks size={28} />
+              </div>
+              <h3 className="text-xl font-bold mb-3">Web3 & Blockchain dApps</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Custom Web3 decentralized apps, smart contracts (Ethereum & Solana), instant crypto payments (USDT/USDC/BTC), and WalletConnect integration.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition-shadow group">
               <div className="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Smartphone size={28} />
               </div>
@@ -568,7 +602,7 @@ export default function App() {
               </p>
             </div>
             
-            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition-shadow group md:col-span-2 lg:col-span-1">
+            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition-shadow group">
               <div className="w-14 h-14 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Wrench size={28} />
               </div>
@@ -668,6 +702,18 @@ export default function App() {
               >
                 <GraduationCap size={18} />
                 <span>School & Portal</span>
+              </button>
+
+              <button 
+                onClick={() => setWebCategory('web3dapp')}
+                className={`flex items-center gap-2 px-5 py-3 rounded-xl font-bold text-sm transition-all whitespace-nowrap ${
+                  webCategory === 'web3dapp' 
+                    ? 'bg-teal-600 text-white shadow-md scale-105' 
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                }`}
+              >
+                <Blocks size={18} />
+                <span>Web3 & Crypto dApp</span>
               </button>
             </div>
           </div>
@@ -904,21 +950,59 @@ export default function App() {
                 </div>
               )}
 
+              {webCategory === 'web3dapp' && (
+                <div className="space-y-4 animate-fadeIn">
+                  <div className="inline-flex items-center gap-2 bg-teal-100 text-teal-800 font-bold px-3 py-1 rounded-lg text-xs uppercase tracking-wider">
+                    Web3 & Blockchain Engineering
+                  </div>
+                  <h3 className="text-3xl font-bold text-slate-900">Web3 dApps, Smart Contracts & Crypto Gateways</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Cutting-edge decentralized applications, smart contracts, and crypto payment integrations for modern tech startups, crypto platforms, and e-commerce stores going global.
+                  </p>
+
+                  <div className="space-y-3 pt-2">
+                    <div className="flex items-start gap-3">
+                      <div className="mt-1 p-1 bg-teal-100 text-teal-800 rounded-full"><CheckCircle size={16} /></div>
+                      <div>
+                        <strong className="text-slate-900 text-sm">Crypto Payment Gateways (USDT / USDC / BTC / ETH / SOL):</strong>
+                        <p className="text-xs text-slate-500">Accept instant global payments in stablecoins and cryptocurrency with 0% chargeback risk and minimal network fees.</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="mt-1 p-1 bg-teal-100 text-teal-800 rounded-full"><CheckCircle size={16} /></div>
+                      <div>
+                        <strong className="text-slate-900 text-sm">Smart Contract Development & Security Audits:</strong>
+                        <p className="text-xs text-slate-500">Custom Solidity and Solana smart contracts for tokens, staking pools, automated rewards, and DAO governance.</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="mt-1 p-1 bg-teal-100 text-teal-800 rounded-full"><CheckCircle size={16} /></div>
+                      <div>
+                        <strong className="text-slate-900 text-sm">1-Click WalletConnect & Web3 Auth:</strong>
+                        <p className="text-xs text-slate-500">Seamless login with MetaMask, Phantom, Coinbase Wallet, or Trust Wallet — no password required.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
               <div className="pt-4">
                 <a 
-                  href={`https://wa.me/2347039352602?text=Hello,%20I%20am%20interested%20in%20a%20${webCategory.toUpperCase()}%20website%20for%20my%20business`}
+                  href={`https://wa.me/2347039352602?text=Hello,%20I%20am%20interested%20in%20a%20${webCategory.toUpperCase()}%20build%20for%20my%20business`}
                   onClick={(e) => handleOrderClick(
                     e, 
-                    `${webCategory === 'woocommerce' ? 'WooCommerce Store' : webCategory === 'shopify' ? 'Shopify Store' : webCategory === 'realestate' ? 'Real Estate Portal' : webCategory === 'wordpress' ? 'WordPress Site' : webCategory === 'corporate' ? 'Corporate Website' : 'School Portal'} Order Received!`, 
-                    `Your request for a custom ${webCategory.toUpperCase()} website build is being handled. Connecting you to WhatsApp...`, 
-                    `https://wa.me/2347039352602?text=Hello,%20I%20am%20interested%20in%20a%20${webCategory.toUpperCase()}%20website%20for%20my%20business`
+                    `${webCategory === 'woocommerce' ? 'WooCommerce Store' : webCategory === 'shopify' ? 'Shopify Store' : webCategory === 'realestate' ? 'Real Estate Portal' : webCategory === 'wordpress' ? 'WordPress Site' : webCategory === 'corporate' ? 'Corporate Website' : webCategory === 'web3dapp' ? 'Web3 dApp / Crypto Gateway' : 'School Portal'} Order Received!`, 
+                    `Your request for a custom ${webCategory.toUpperCase()} build is being handled. Connecting you to WhatsApp...`, 
+                    `https://wa.me/2347039352602?text=Hello,%20I%20am%20interested%20in%20a%20${webCategory.toUpperCase()}%20build%20for%20my%20business`
                   )}
                   target="_blank" 
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold px-7 py-3.5 rounded-xl shadow-lg shadow-green-500/20 transition-all transform hover:scale-105 text-sm"
                 >
                   <MessageCircle size={18} />
-                  <span>Order {webCategory === 'woocommerce' ? 'WooCommerce Store' : webCategory === 'shopify' ? 'Shopify Store' : webCategory === 'realestate' ? 'Real Estate Portal' : webCategory === 'wordpress' ? 'WordPress Site' : webCategory === 'corporate' ? 'Corporate Website' : 'School Portal'}</span>
+                  <span>Order {webCategory === 'woocommerce' ? 'WooCommerce Store' : webCategory === 'shopify' ? 'Shopify Store' : webCategory === 'realestate' ? 'Real Estate Portal' : webCategory === 'wordpress' ? 'WordPress Site' : webCategory === 'corporate' ? 'Corporate Website' : webCategory === 'web3dapp' ? 'Web3 dApp / Crypto Gateway' : 'School Portal'}</span>
                 </a>
               </div>
             </div>
@@ -938,6 +1022,7 @@ export default function App() {
                     {webCategory === 'wordpress' && 'WordPress CMS'}
                     {webCategory === 'corporate' && 'Corporate Enterprise'}
                     {webCategory === 'education' && 'School Portal V2'}
+                    {webCategory === 'web3dapp' && 'Web3 dApp + WalletConnect'}
                   </span>
                 </div>
 
@@ -1129,7 +1214,167 @@ export default function App() {
                     </div>
                   </div>
                 )}
+
+                {/* Web3 dApp Live Mockup */}
+                {webCategory === 'web3dapp' && (
+                  <div className="bg-slate-950 p-4 rounded-xl border border-teal-500/30 space-y-4 animate-fadeIn">
+                    <div className="bg-slate-900 p-3 rounded-lg border border-slate-800 flex items-center justify-between">
+                      <span className="font-bold text-sm text-white flex items-center gap-2">
+                        <Blocks className="text-teal-400 animate-spin" style={{ animationDuration: '8s' }} size={18} /> 
+                        Nexus Decentralized Protocol
+                      </span>
+                      <span className="bg-teal-950 text-teal-300 border border-teal-800 text-[10px] px-2.5 py-0.5 rounded-full font-mono font-bold flex items-center gap-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-teal-400"></span> EVM & Solana
+                      </span>
+                    </div>
+
+                    <div className="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-3">
+                      <div className="flex items-center justify-between text-xs pb-2 border-b border-slate-800">
+                        <span className="text-slate-400">Wallet Status:</span>
+                        <span className="text-teal-400 font-mono font-bold bg-slate-950 px-2 py-0.5 rounded border border-slate-800 flex items-center gap-1">
+                          <Wallet size={12} /> 0x7F2a...9B34
+                        </span>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-2 text-center text-xs">
+                        <div className="bg-slate-950 p-3 rounded-lg border border-slate-800">
+                          <div className="text-[10px] text-slate-400 uppercase font-bold">Stablecoin Balance</div>
+                          <div className="text-base font-black text-white mt-0.5">14,250 USDT</div>
+                        </div>
+                        <div className="bg-slate-950 p-3 rounded-lg border border-slate-800">
+                          <div className="text-[10px] text-slate-400 uppercase font-bold">Staking Yield</div>
+                          <div className="text-base font-black text-emerald-400 mt-0.5">+18.4% APY</div>
+                        </div>
+                      </div>
+
+                      <div className="bg-teal-950/40 p-2.5 rounded-lg border border-teal-800/50 text-[11px] text-teal-200 flex items-center justify-between">
+                        <span className="flex items-center gap-1.5"><ShieldCheck size={14} className="text-teal-400" /> Smart Contract Audited & Verified</span>
+                        <span className="font-mono text-[10px] text-teal-400">CertiK Pass</span>
+                      </div>
+
+                      <a 
+                        href="https://wa.me/2347039352602?text=Hello,%20I%20want%20to%20build%20a%20Web3%20dApp%20or%20Crypto%20Gateway"
+                        onClick={(e) => handleOrderClick(e, 'Web3 Wallet Connected', 'Simulating Web3 dApp wallet connect and crypto payment checkout gateway...', 'https://wa.me/2347039352602?text=Hello,%20I%20want%20to%20build%20a%20Web3%20dApp%20or%20Crypto%20Gateway')}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="w-full bg-gradient-to-r from-teal-500 to-emerald-600 hover:from-teal-400 hover:to-emerald-500 text-slate-950 font-black py-2.5 rounded-lg flex items-center justify-center gap-2 transition-all shadow-lg shadow-teal-500/20 text-xs"
+                      >
+                        <Wallet size={16} />
+                        <span>Instant Crypto Checkout (USDT / USDC)</span>
+                      </a>
+                    </div>
+                  </div>
+                )}
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Web3 & Blockchain Technology Services Section */}
+      <section id="web3-blockchain" className="py-24 bg-slate-950 text-white relative overflow-hidden border-t border-slate-800">
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-teal-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-teal-950 border border-teal-800 text-teal-400 font-semibold px-4 py-1.5 rounded-full text-sm mb-4">
+              <Blocks size={16} />
+              <span>Next-Gen Web3 & Blockchain Engineering</span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight">
+              Up-To-Date With <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-emerald-300 to-cyan-400">Blockchain & Web3</span> Tech
+            </h2>
+            <p className="text-slate-300 text-lg max-w-2xl mx-auto leading-relaxed">
+              We build secure decentralized applications (dApps), smart contracts, crypto payment gateways (USDT, USDC, BTC), and token-gated Telegram communities for global businesses.
+            </p>
+          </div>
+
+          {/* Capability Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <div className="bg-slate-900/90 p-6 rounded-2xl border border-slate-800 hover:border-teal-500/50 transition-all hover:-translate-y-1 group">
+              <div className="w-12 h-12 bg-teal-950 text-teal-400 rounded-xl border border-teal-800 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <Blocks size={24} />
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2">Custom dApp Solutions</h3>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Responsive dApp frontends integrated with WalletConnect, MetaMask, Phantom, and Coinbase Wallet for seamless user onboarding.
+              </p>
+            </div>
+
+            <div className="bg-slate-900/90 p-6 rounded-2xl border border-slate-800 hover:border-teal-500/50 transition-all hover:-translate-y-1 group">
+              <div className="w-12 h-12 bg-emerald-950 text-emerald-400 rounded-xl border border-emerald-800 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <Cpu size={24} />
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2">Smart Contracts & Audits</h3>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Solidity (EVM) and Rust (Solana) smart contracts for custom tokens, staking, NFT launchpads, and audited security logic.
+              </p>
+            </div>
+
+            <div className="bg-slate-900/90 p-6 rounded-2xl border border-slate-800 hover:border-teal-500/50 transition-all hover:-translate-y-1 group">
+              <div className="w-12 h-12 bg-cyan-950 text-cyan-400 rounded-xl border border-cyan-800 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <Coins size={24} />
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2">Crypto Payment Gateways</h3>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Accept USDT, USDC, BTC, and ETH directly on your store or website with 0% chargebacks and non-custodial direct settlement.
+              </p>
+            </div>
+
+            <div className="bg-slate-900/90 p-6 rounded-2xl border border-slate-800 hover:border-teal-500/50 transition-all hover:-translate-y-1 group">
+              <div className="w-12 h-12 bg-indigo-950 text-indigo-400 rounded-xl border border-indigo-800 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <Bot size={24} />
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2">Token-Gated Telegram Bots</h3>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Custom Telegram bots that automatically verify user wallet token/NFT balances to grant VIP channel access or send price alerts.
+              </p>
+            </div>
+          </div>
+
+          {/* Supported Blockchain Ecosystems */}
+          <div className="bg-slate-900 p-8 rounded-3xl border border-slate-800">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <div>
+                <h3 className="text-xl font-bold text-white mb-1">Ecosystems & Tech Stack We Support</h3>
+                <p className="text-xs text-slate-400">Battle-tested Web3 protocols, smart contract standards, and payment rails.</p>
+              </div>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="bg-slate-950 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5">
+                  <span className="text-indigo-400 font-bold">Ξ</span> Ethereum
+                </span>
+                <span className="bg-slate-950 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5">
+                  <span className="text-purple-400 font-bold">◎</span> Solana
+                </span>
+                <span className="bg-slate-950 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5">
+                  <span className="text-purple-300 font-bold">⬡</span> Polygon
+                </span>
+                <span className="bg-slate-950 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5">
+                  <span className="text-amber-400 font-bold">🟡</span> BNB Chain
+                </span>
+                <span className="bg-slate-950 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5">
+                  <span className="text-teal-400 font-bold">₮</span> USDT & USDC
+                </span>
+                <span className="bg-slate-950 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5">
+                  <Wallet size={12} className="text-teal-400" /> WalletConnect
+                </span>
+              </div>
+            </div>
+
+            <div className="mt-8 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="text-xs text-slate-400">
+                Ready to empower your business with modern Web3, tokenomics, or crypto payments?
+              </div>
+              <a 
+                href="https://wa.me/2347039352602?text=Hello,%20I%20want%20to%20discuss%20a%20Web3%20and%20Blockchain%20project%20for%20my%20business"
+                onClick={(e) => handleOrderClick(e, 'Web3 Project Consultation', 'Connecting you with our senior Web3 & Blockchain tech team on WhatsApp...', 'https://wa.me/2347039352602?text=Hello,%20I%20want%20to%20discuss%20a%20Web3%20and%20Blockchain%20project%20for%20my%20business')}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-400 hover:to-emerald-400 text-slate-950 font-black px-6 py-3 rounded-xl text-xs transition-all shadow-lg shadow-teal-500/20 transform hover:scale-105 shrink-0"
+              >
+                <MessageCircle size={16} />
+                <span>Consult on Web3 Project</span>
+              </a>
             </div>
           </div>
         </div>
